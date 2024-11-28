@@ -57,8 +57,8 @@ async def upload(
 async def check_virus(file: UploadFile):
     finished_folder_path = os.path.join(TMP_FOLDER)
     finished_file_path = f"{finished_folder_path}/{file.filename}"
-    with open(f"{finished_file_path}", "ab") as image:
-        image.write(file.file.read())
+    with open(f"{finished_file_path}", "ab") as buffer:
+        buffer.write(file.file.read())
 
     api_response = api_instance.scan_file(finished_file_path)
     os.remove(finished_file_path)
