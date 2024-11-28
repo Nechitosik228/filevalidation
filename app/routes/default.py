@@ -21,7 +21,6 @@ api_instance = cloudmersive_virus_api_client.ScanApi(
 MAX_FILE_SIZE = 5 * 1024 * 1024
 TMP_FOLDER = "tmp"
 FORMATS = ["image/png", "image/gif"]
-ANTI_VIRUS_API_URL = "testapi.cloudmersive.com"
 
 os.makedirs(TMP_FOLDER, exist_ok=True)
 
